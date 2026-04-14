@@ -1,0 +1,431 @@
+/* ============================================================
+   FICHIER CSS PERSONNALISÉ
+   Styles personnalisés et animations pour le site
+   Développé pour l'Église Tabernacle de la Résurrection
+   ============================================================ */
+
+/* ============================================================
+   ANIMATIONS PERSONNALISÉES
+   ============================================================ */
+
+/* Animation de fondu entrant (fade in) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Classe pour appliquer l'animation fade-in */
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out forwards;
+    opacity: 0;
+}
+
+/* Animation fade-in-up (remontée avec transparence) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Classe pour appliquer l'animation fade-in-up */
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+/* Animation de pulsation (pulse) */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Animation de glissement horizontal (slide-in-left) */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* Animation de glissement horizontal (slide-in-right) */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Animation de rotation (spin) */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Animation de zoom entrant (zoom-in) */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.zoom-in {
+    animation: zoomIn 0.6s ease-out forwards;
+}
+
+/* ============================================================
+   STYLES GLOBAUX
+   ============================================================ */
+
+/* Scroll lisse pour toute la page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Customisation de la scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2563eb; /* Couleur bleue (couleur du site) */
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1d4ed8;
+}
+
+/* ============================================================
+   STYLES POUR LES BOUTONS
+   ============================================================ */
+
+/* Bouton principal avec effet de survol */
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #2563eb;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* Bouton secondaire */
+.btn-secondary {
+    background-color: transparent;
+    color: #2563eb;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #2563eb;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #eff6ff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+}
+
+/* ============================================================
+   STYLES POUR LES CARTES
+   ============================================================ */
+
+/* Cartes générale avec effet de survol */
+.card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================================
+   STYLES POUR LE HEADER/NAVIGATION
+   ============================================================ */
+
+/* Navigation avec effet de recollement sticky */
+header {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Lien de navigation avec animation */
+nav a {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Effets spéciaux pour les liens du menu */
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2563eb;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ============================================================
+   STYLES POUR LES FORMULAIRES
+   ============================================================ */
+
+/* Champs d'entrée (input et textarea) */
+input,
+textarea {
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    transform: scale(1.02);
+}
+
+/* ============================================================
+   STYLES POUR LES IMAGES
+   ============================================================ */
+
+/* Images réactives */
+img {
+    max-width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+/* Effet de zoom sur les images au survol */
+.hover\:zoom-on-hover:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================================
+   STYLES TYPOGRAPHIQUES
+   ============================================================ */
+
+/* Titres avec accent */
+h1,
+h2,
+h3 {
+    transition: all 0.3s ease;
+}
+
+/* Titres bleus avec gradient au survol */
+h2.text-blue-600 {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ============================================================ */
+
+@media (max-width: 768px) {
+    /* Réduction du padding sur mobile */
+    .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Ajustement des espacements verticaux */
+    .py-16 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    /* Taille de police réduite pour les titres sur mobile */
+    h1 {
+        font-size: 1.875rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    /* Réduction de l'espace entre les éléments */
+    .gap-8 {
+        gap: 1.5rem;
+    }
+
+    /* Masquage du menu desktop */
+    nav ul {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    /* Très petits écrans */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    /* Boutons au 100% de largeur */
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+
+    /* Cartes avec moins d'espacement */
+    .grid {
+        gap: 1rem;
+    }
+}
+
+/* ============================================================
+   UTILITAIRES ET CLASSES SUPPLÉMENTAIRES
+   ============================================================ */
+
+/* Classe pour les textes with ellipsis (truncate) */
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Classe pour les ombres personnalisées */
+.shadow-custom {
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.15);
+}
+
+.shadow-custom-lg {
+    box-shadow: 0 8px 40px rgba(37, 99, 235, 0.2);
+}
+
+/* Classe pour les dégradés bleus */
+.bg-gradient-blue {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+}
+
+.bg-gradient-blue-light {
+    background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+}
+
+/* Classe pour les icônes colorées */
+.icon-blue {
+    color: #2563eb;
+    transition: all 0.3s ease;
+}
+
+.icon-blue:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ============================================================
+   ACCESSIBILITÉ
+   ============================================================ */
+
+/* Focus visible pour la navigation au clavier */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Préférence de mouvement réduit */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================================
+   IMPRESSION
+   ============================================================ */
+
+@media print {
+    /* Masquer les éléments non nécessaires à l'impression */
+    header,
+    footer,
+    .no-print {
+        display: none;
+    }
+
+    /* Ajouter des marges pour l'impression */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+}

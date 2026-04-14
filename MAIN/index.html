@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabernacle de la Résurrection - Brazzaville</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fichier CSS personnalisé pour les animations et styles supplémentaires -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- ============================================================
+         HEADER / NAVIGATION
+         ============================================================ -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            
+            <!-- LOGO -->
+            <div class="flex-shrink-0">
+                <img src="../images/LOGO TDR.jpg" alt="Logo Tabernacle" class="h-16 w-auto rounded-full shadow-lg hover:shadow-xl transition-shadow">
+            </div>
+
+            <!-- MENU NAVIGATION (Desktop) -->
+            <ul class="hidden md:flex space-x-8 font-semibold text-gray-700">
+                <li>
+                    <a href="#accueil" class="hover:text-blue-600 transition-colors duration-300 border-b-2 border-transparent hover:border-blue-600 pb-1">
+                        Accueil
+                    </a>
+                </li>
+                <li>
+                    <a href="#qui-sommes-nous" class="hover:text-blue-600 transition-colors duration-300 border-b-2 border-transparent hover:border-blue-600 pb-1">
+                        Qui sommes nous
+                    </a>
+                </li>
+                <li>
+                    <a href="#mission" class="hover:text-blue-600 transition-colors duration-300 border-b-2 border-transparent hover:border-blue-600 pb-1">
+                        Notre mission
+                    </a>
+                </li>
+                <li>
+                    <a href="#temoignages" class="hover:text-blue-600 transition-colors duration-300 border-b-2 border-transparent hover:border-blue-600 pb-1">
+                        Les témoignages
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="hover:text-blue-600 transition-colors duration-300 border-b-2 border-transparent hover:border-blue-600 pb-1">
+                        Nous contacter
+                    </a>
+                </li>
+            </ul>
+
+            <!-- MENU BURGER (Mobile) -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-blue-600 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- MENU MOBILE DÉROULANT -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-50 px-4 py-4 space-y-2 border-t border-blue-200">
+            <a href="#accueil" class="block py-2 text-gray-700 hover:text-blue-600 font-semibold transition-colors">
+                Accueil
+            </a>
+            <a href="#qui-sommes-nous" class="block py-2 text-gray-700 hover:text-blue-600 font-semibold transition-colors">
+                Qui sommes nous
+            </a>
+            <a href="#mission" class="block py-2 text-gray-700 hover:text-blue-600 font-semibold transition-colors">
+                Notre mission
+            </a>
+            <a href="#temoignages" class="block py-2 text-gray-700 hover:text-blue-600 font-semibold transition-colors">
+                Les témoignages
+            </a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600 font-semibold transition-colors">
+                Nous contacter
+            </a>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         SECTION ACCUEIL
+         ============================================================ -->
+    <section id="accueil" class="bg-gradient-to-br from-white via-blue-50 to-white py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Image -->
+                <div class="fade-in">
+                    <img src="../images/PASTEUR DEVANT LA CHAIR.jpg" alt="Église Tabernacle" class="rounded-lg shadow-2xl hover:shadow-3xl transition-shadow object-cover w-full h-96">
+                </div>
+
+                <!-- Texte d'accueil -->
+                <div class="fade-in" style="animation-delay: 0.2s;">
+                    <h1 class="text-4xl sm:text-5xl font-bold text-blue-600 mb-6">
+                        Bienvenue au Tabernacle de la Résurrection
+                    </h1>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Nous sommes une communauté chrétienne dynamique basée à Brazzaville, dédiée à servir Dieu et à partager l'évangile de Jésus-Christ avec dévouement et amour.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                        Rejoignez-nous chaque dimanche pour des services de culte enrichissants, des prières puissantes et une communion fraternelle remplie de l'Esprit Saint.
+                    </p>
+
+                    <!-- Boutons d'action -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
+                            Nous Visiter
+                        </a>
+                        <a href="#mission" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                            En Savoir Plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION QUI SOMMES-NOUS
+         ============================================================ -->
+    <section id="qui-sommes-nous" class="bg-white py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-4xl sm:text-5xl font-bold text-blue-600 mb-4">
+                    Qui sommes-nous ?
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Découvrez l'histoire et les valeurs qui nous définissent
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Image du Pasteur -->
+                <div class="fade-in-up" style="animation-delay: 0.1s;">
+                    <img src="../images/PASTEUR EN CHAIR EN VESTE NOIR OK.jpg" alt="Pasteur Ludovic MPASSI" class="rounded-lg shadow-2xl hover:shadow-3xl transition-shadow object-cover w-full h-96">
+                </div>
+
+                <!-- Contenu texte -->
+                <div class="fade-in-up" style="animation-delay: 0.2s;">
+                    <h3 class="text-3xl font-bold text-blue-600 mb-4">
+                        Pasteur Ludovic MPASSI
+                    </h3>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                        Sous la direction spirituelle du Pasteur Ludovic MPASSI, le Tabernacle de la Résurrection s'est établi comme un phare d'espoir et de foi dans la communauté de Brazzaville.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                        Notre église accueille tous les croyants qui cherchent une relation authentique avec Dieu. Nous croyons à la puissance de la prière, à la guérison divine et à la transformation spirituelle.
+                    </p>
+
+                    <!-- Points clés -->
+                    <div class="space-y-4 mt-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Prières puissantes et exaucement</p>
+                                <p class="text-gray-600">Nous vivons les miracles de la foi</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Enseignement biblique profond</p>
+                                <p class="text-gray-600">Comprendre la Parole de Dieu</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Communion fraternelle authentique</p>
+                                <p class="text-gray-600">Une famille unie dans la foi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION NOTRE MISSION
+         ============================================================ -->
+    <section id="mission" class="bg-gradient-to-br from-blue-50 to-white py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-4xl sm:text-5xl font-bold text-blue-600 mb-4">
+                    Notre Mission
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Ce qui nous guide et donne sens à notre ministère
+                </p>
+            </div>
+
+            <!-- Grille des missions -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Carte 1 -->
+                <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow p-8 fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="text-4xl text-blue-600 mb-4">
+                        <i class="fas fa-cross"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Évangélisation</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Partager la Bonne Nouvelle de l'évangile de Jésus-Christ à travers des campagnes d'évangélisation, des cultes publics et le témoignage personnel.
+                    </p>
+                </div>
+
+                <!-- Carte 2 -->
+                <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow p-8 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="text-4xl text-blue-600 mb-4">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Guérison et Délivrance</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Conduire les réunions de prière pour la guérison divine, la délivrance spirituelle et la transformation personnelle selon la volonté de Dieu.
+                    </p>
+                </div>
+
+                <!-- Carte 3 -->
+                <div class="bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow p-8 fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="text-4xl text-blue-600 mb-4">
+                        <i class="fas fa-people-group"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Discipulat</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Former et équiper les croyants à devenir des disciples de Jésus-Christ matures et actifs dans leur foi et leur témoignage.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contenu additionnel de la mission -->
+            <div class="mt-16 bg-white rounded-lg shadow-lg p-8 fade-in-up">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Notre Engagement</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    À travers nos services spirituels, nous nous engageons à être une lumière dans Brazzaville et à apporter espoir et guérison à tous ceux qui nous rejoignent. Nous croyons fermement aux miracles et à la transformation que seul Dieu peut apporter.
+                </p>
+                <p class="text-gray-700 leading-relaxed">
+                    Notre vision est de voir une génération de croyants forts en foi, vivants selon la Parole de Dieu, et actifs dans l'extension du royaume de Dieu.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION TÉMOIGNAGES
+         ============================================================ -->
+    <section id="temoignages" class="bg-white py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-4xl sm:text-5xl font-bold text-blue-600 mb-4">
+                    Les Témoignages
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Écoutez les récits authentiques de guérison et de transformation spirituelle
+                </p>
+            </div>
+
+            <!-- Grille des témoignages -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Témoignage 1 -->
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-lg shadow-lg p-8 fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "J'étais souffrant depuis longtemps, et personne ne pouvait m'aider. Après une prière au Tabernacle avec le Pasteur MPASSI, j'ai senti le pouvoir de Dieu m'envahir, et j'ai été complètement guéri. Gloire à Dieu !"
+                    </p>
+                    <div class="border-t border-blue-200 pt-4">
+                        <p class="font-semibold text-gray-800">Jean Luc M.</p>
+                        <p class="text-sm text-blue-600">Guérison miraculeuse</p>
+                    </div>
+                </div>
+
+                <!-- Témoignage 2 -->
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-lg shadow-lg p-8 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "Ma vie était remplie de difficultés et de désespoir. Au Tabernacle, j'ai trouvé la foi, l'espoir et une famille unie. Le ministère du Pasteur MPASSI a transformé ma vie spirituelle complètement."
+                    </p>
+                    <div class="border-t border-blue-200 pt-4">
+                        <p class="font-semibold text-gray-800">Marie Jeanne K.</p>
+                        <p class="text-sm text-blue-600">Transformation spirituelle</p>
+                    </div>
+                </div>
+
+                <!-- Témoignage 3 -->
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-lg shadow-lg p-8 fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "Pendant les réunions de prière, j'ai reçu la présence de l'Esprit Saint. Mon cœur a été purifié, et je sens une force nouvelle en moi. Je recommande vivement ce lieu de recueillement."
+                    </p>
+                    <div class="border-t border-blue-200 pt-4">
+                        <p class="font-semibold text-gray-800">Pierre N.</p>
+                        <p class="text-sm text-blue-600">Expérience spirituelle profonde</p>
+                    </div>
+                </div>
+
+                <!-- Témoignage 4 -->
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-lg shadow-lg p-8 fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "Ma famille était brisée, mais grâce aux prières et à l'accompagnement du Pasteur MPASSI, nous avons retrouvé l'amour et l'harmonie. C'est un véritable miracle !"
+                    </p>
+                    <div class="border-t border-blue-200 pt-4">
+                        <p class="font-semibold text-gray-800">David et Sylvie T.</p>
+                        <p class="text-sm text-blue-600">Réconciliation familiale</p>
+                    </div>
+                </div>
+
+                <!-- Témoignage 5 -->
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-lg shadow-lg p-8 fade-in-up" style="animation-delay: 0.5s;">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "J'étais dans un état de dépression profonde. Après plusieurs prières avec le Tabernacle, j'ai reçu une libération totale. La puissance de Dieu est réelle !"
+                    </p>
+                    <div class="border-t border-blue-200 pt-4">
+                        <p class="font-semibold text-gray-800">Carole M.</p>
+                        <p class="text-sm text-blue-600">Libération émotionnelle</p>
+                    </div>
+                </div>
+
+                <!-- Témoignage 6 -->
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-lg shadow-lg p-8 fade-in-up" style="animation-delay: 0.6s;">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        "En travaillant depuis longtemps sans résultat, j'ai trouvé au Tabernacle un lieu où croire. Par la prière du Pasteur MPASSI, j'ai obtenu un emploi stable. Merci Seigneur !"
+                    </p>
+                    <div class="border-t border-blue-200 pt-4">
+                        <p class="font-semibold text-gray-800">Samuel B.</p>
+                        <p class="text-sm text-blue-600">Provision matérielle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION NOUS CONTACTER
+         ============================================================ -->
+    <section id="contact" class="bg-gradient-to-br from-blue-600 to-blue-800 py-16 sm:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in-up">
+                <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">
+                    Nous Contacter !!!
+                </h2>
+                <p class="text-lg text-blue-100 max-w-2xl mx-auto">
+                    Prenez contact avec nous pour toute question ou pour nous rendre visite
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                
+                <!-- Localisation -->
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="text-4xl text-blue-600 mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Adresse</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        P13 Lot Parcelle 240 SONACO, MOUKONDO
+                        <br>
+                        Av de la Poste, après l'hôpital des Palestiniens
+                        <br>
+                        Brazzaville, République du Congo
+                    </p>
+                </div>
+
+                <!-- Téléphone -->
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="text-4xl text-blue-600 mb-4">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Téléphone / WhatsApp</h3>
+                    <p class="text-gray-600 text-lg font-semibold">
+                        +242 06 984 2607
+                    </p>
+                    <a href="https://wa.me/242069842607" class="inline-block mt-4 bg-green-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors">
+                        <i class="fab fa-whatsapp mr-2"></i>Écrire sur WhatsApp
+                    </a>
+                </div>
+
+                <!-- Email -->
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="text-4xl text-blue-600 mb-4">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Email</h3>
+                    <p class="text-gray-600 text-sm">
+                        Rendez-vous sur notre page Facebook pour plus d'informations :
+                    </p>
+                    <a href="https://www.facebook.com/tabernacle.de.la.resurection" class="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        <i class="fab fa-facebook mr-2"></i>Nous Suivre
+                    </a>
+                </div>
+            </div>
+
+            <!-- Formulaire de contact -->
+            <div class="bg-white rounded-lg shadow-2xl p-8 fade-in-up" style="animation-delay: 0.4s;">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Envoyez-nous un message</h3>
+                <form class="space-y-6" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    
+                    <!-- Champ Nom -->
+                    <div>
+                        <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
+                            Votre Nom *
+                        </label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all"
+                            placeholder="Entrez votre nom"
+                        >
+                    </div>
+
+                    <!-- Champ Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                            Votre Email *
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all"
+                            placeholder="Entrez votre email"
+                        >
+                    </div>
+
+                    <!-- Champ Téléphone -->
+                    <div>
+                        <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
+                            Votre Téléphone
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all"
+                            placeholder="Entrez votre numéro de téléphone"
+                        >
+                    </div>
+
+                    <!-- Champ Sujet -->
+                    <div>
+                        <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2">
+                            Sujet *
+                        </label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all"
+                            placeholder="Quel est le sujet de votre message ?"
+                        >
+                    </div>
+
+                    <!-- Champ Message -->
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
+                            Votre Message *
+                        </label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            required
+                            rows="6"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all resize-none"
+                            placeholder="Écrivez votre message ici..."
+                        ></textarea>
+                    </div>
+
+                    <!-- Bouton Submit -->
+                    <div>
+                        <button 
+                            type="submit"
+                            class="w-full bg-blue-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors shadow-lg transform hover:scale-105 duration-300"
+                        >
+                            <i class="fas fa-paper-plane mr-2"></i>Envoyer le Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                
+                <!-- Colonne 1 : À propos -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Tabernacle de la Résurrection</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Une communauté chrétienne dynamique dédiée à servir Dieu et partager l'évangile de Jésus-Christ.
+                    </p>
+                </div>
+
+                <!-- Colonne 2 : Liens rapides -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Liens Rapides</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>
+                            <a href="#accueil" class="hover:text-blue-400 transition-colors">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="#qui-sommes-nous" class="hover:text-blue-400 transition-colors">Qui sommes nous</a>
+                        </li>
+                        <li>
+                            <a href="#mission" class="hover:text-blue-400 transition-colors">Notre mission</a>
+                        </li>
+                        <li>
+                            <a href="#temoignages" class="hover:text-blue-400 transition-colors">Les témoignages</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="hover:text-blue-400 transition-colors">Nous contacter</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Colonne 3 : Réseaux sociaux -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Suivez-nous</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/tabernacle.de.la.resurection" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ligne de séparation -->
+            <div class="border-t border-gray-700 pt-8">
+                <div class="text-center text-gray-400">
+                    <p>&copy; 2026 Tabernacle de la Résurrection. Tous droits réservés.</p>
+                    <p class="text-sm mt-2">
+                        <i class="fas fa-location-dot"></i> Brazzaville, République du Congo
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         SCRIPT JAVASCRIPT
+         ============================================================ -->
+    <script src="script.js"></script>
+
+</body>
+</html>
