@@ -461,5 +461,33 @@ textarea:focus-visible {
    ====================================================== */
 
 @media (prefers-color-scheme:dark ) {
-    color-scheme: black;
+    body {
+        background-color: #1f2937; /* Couleur de fond sombre */
+        color: #f9fafb; /* Couleur de texte claire */
+    }
+
+    header {
+        background-color: rgba(31, 41, 55, 0.95); /* Fond sombre pour le header */
+    }
+
+    .btn-primary {
+        background-color: #2563eb;
+        color: white;
+        border-color: #2563eb;
+    }
+
+    .btn-primary:hover {
+        background-color: #1d4ed8;
+        border-color: #1d4ed8;
+    }
+
+    .btn-secondary {
+        background-color: transparent;
+        color: #2563eb;
+        border-color: #2563eb;
+    }
+
+    .btn-secondary:hover {
+        background-color: rgba(37, 99, 235, 0.1);
+    }
 }
