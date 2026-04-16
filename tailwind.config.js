@@ -1,10 +1,11 @@
-/* ============================================================
-   Tailwind CSS configuration
-   ============================================================
-   Ce fichier expose la configuration utilisée par le CDN Tailwind.
-   Il doit être chargé avant le script CDN de Tailwind.
-*/
-
-tailwind.config = {
-    darkMode: 'class'
+module.exports = {
+  content: [
+    './index.html',
+    './JS/**/*.{js,ts,jsx,tsx}'
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {}
+  },
+  plugins: []
 };

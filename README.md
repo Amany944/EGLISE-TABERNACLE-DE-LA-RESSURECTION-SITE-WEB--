@@ -197,17 +197,14 @@ form.addEventListener('submit', function (event) {
 Le site utilise **Tailwind CSS via CDN**. Si vous voulez installer Tailwind localement :
 
 ```bash
-# 1. Initialiser un projet Node.js
-npm init -y
+# 1. Installer les dépendances depuis package.json
+npm install
 
-# 2. Installer Tailwind CSS
-npm install -D tailwindcss
-
-# 3. Créer le fichier de configuration
+# 2. Créer le fichier de configuration si nécessaire
 npx tailwindcss init
 
-# 4. Compiler le CSS
-npx tailwindcss -i ./input.css -o ./output.css --watch
+# 3. Compiler le CSS localement
+npx tailwindcss -i ./input.css -o ./CSS/tailwind.css --watch
 ```
 
 ---
