@@ -1,0 +1,26 @@
+salut !
+je veux que tu me code un site web d'une église de brazzaville appellée TABERNACLE DE LA RESSURECTION situé a l'addresse suivante :P13 Lot Parcelle 240 SONACO, MOUKONDO/ Réf. - École Privée Zola. Av de la Poste, après l'hôpital des Palestiniens, Brazzaville, Republique du Congo +242 06 984 2607, Brazzaville, Republique du Congo
+
+vas dans le dossier image , tu y trouvera un logo de l'église, inspire toi de cela ,
+ 
+fais en sorte que le site ait un theme blanc avec une couleur secondaire Bleu comme celui du logo 
+
+pour l'entete du site, tu mettra le logo et une liste de cinq section du site: ( accueil, qui sommes nous, notre mission,les témoignages, nous contacter )
+il doit etre bien stylisé 
+
+pour l'anglet accueil , qui somme nous et notre mission, tu mets tu t'inspire du site baruti tabernacle du design au responsive avec des images prise dans le dossier image dans la racine du projet sans oublier de predre le contenu a mettre dans le site que tu aura a prendre dans le compte facebook suivant:tabernacle de la resurection
+afin que tu puisse prendre que le design pas le contenu 
+
+pour l'anglet temoignage, tu mettra une partie ou tu mettra des personnes qui temoignent des expériences spirituelles et des guerrison lors de la reunion de priere avec le reverand Pasteur Ludovic MPASSI 
+
+pour nous contacter , tu prends le numero whatsapp et le Gmail dans le compte facebook tabernacle de la resurection 
+et tu mettre nous contacter !! et un bouton pour submit 
+
+gere mi bien le responsive pour tous types d'appareil avec des animations et des bouttons modernes et tres bie stylisé en relation avec le theme de mon site.
+
+
+
+utilise les technologies suivantes: html, css tailwindcss dont tu installera en local dans le root du projet 
+
+
+code le site en francais et clairement afin qu'un dev junior puisse comprendre le code
