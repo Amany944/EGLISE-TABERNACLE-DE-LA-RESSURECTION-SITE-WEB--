@@ -281,6 +281,71 @@ function highlightActiveNavLink() {
 // highlightActiveNavLink();
 
 // ============================================================
+// 5.1 GESTION DU MODE CLair / MODE SOMBRE
+// ============================================================
+
+/**
+ * Configure le thème clair / sombre et stocke la préférence.
+ */
+function setupThemeToggle() {
+    const lightModeBtn = document.getElementById('light-mode-btn');
+    const darkModeBtn = document.getElementById('dark-mode-btn');
+    const themeDetails = document.querySelector('details');
+
+    function applyTheme(theme) {
+        const isDark = theme === 'dark';
+        document.documentElement.classList.toggle('dark', isDark);
+        try {
+            window.localStorage.setItem('theme', theme);
+        } catch (error) {
+            console.warn('Impossible de sauvegarder le thème :', error);
+        }
+        if (themeDetails) {
+            themeDetails.open = false;
+        }
+    }
+
+    function initTheme() {
+        let theme = null;
+        try {
+            theme = window.localStorage.getItem('theme');
+        } catch (error) {
+            console.warn('Impossible de lire le thème enregistré :', error);
+        }
+
+        if (!theme && window.matchMedia) {
+            theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        applyTheme(theme || 'light');
+    }
+
+    if (lightModeBtn) {
+        lightModeBtn.addEventListener('click', function (event) {
+            event.preventDefault();
+            applyTheme('light');
+        });
+    }
+
+    if (darkModeBtn) {
+        darkModeBtn.addEventListener('click', function (event) {
+            event.preventDefault();
+            applyTheme('dark');
+        });
+    }
+
+    document.addEventListener('click', function (event) {
+        if (themeDetails && themeDetails.open && !themeDetails.contains(event.target)) {
+            themeDetails.open = false;
+        }
+    });
+
+    initTheme();
+}
+
+document.addEventListener('DOMContentLoaded', setupThemeToggle);
+
+// ============================================================
 // 6. GESTION DES ÉVÉNEMENTS DE FENÊTRE (WINDOW)
 // ============================================================
 

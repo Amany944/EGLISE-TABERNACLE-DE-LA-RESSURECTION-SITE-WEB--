@@ -64,6 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
     
+    const API_BASE_URL = 'http://localhost:8000/api';
+
     // ============================================================
     // 3. SCROLL SMOOTH VERS LES SECTIONS
     // ============================================================
@@ -123,30 +125,78 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ============================================================
-    // 6. FORMULAIRE DE CONTACT
+    // 6. FORMULAIRE DE CONTACT AVEC BACKEND
     // ============================================================
-    const contactForm = document.querySelector('form');
-    
+    const contactForm = document.getElementById('contactForm');
+
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            // Vérification basique avant submission
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.getElementById('message').value.trim();
-            
-            if (!name || !email || !message) {
-                e.preventDefault();
-                alert('Veuillez remplir tous les champs obligatoires.');
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault(); // Empêcher la soumission par défaut
+
+            // Récupérer les valeurs des champs
+            const formData = {
+                name: document.getElementById('name').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                subject: document.getElementById('subject').value.trim(),
+                message: document.getElementById('message').value.trim()
+            };
+
+            // Validation côté client
+            if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+                showMessage('Veuillez remplir tous les champs obligatoires.', 'error');
+                return;
+            }
+
+            // Validation email
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(formData.email)) {
+                showMessage('Veuillez entrer une adresse email valide.', 'error');
+                return;
+            }
+
+            // Désactiver le bouton pendant l'envoi
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Envoi en cours...';
+
+            try {
+                // Envoyer les données au backend
+                const response = await fetch(`${API_BASE_URL}/contacts`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    showMessage(result.message, 'success');
+                    contactForm.reset(); // Vider le formulaire
+                } else {
+                    showMessage(result.message || 'Une erreur est survenue.', 'error');
+                }
+
+            } catch (error) {
+                console.error('Erreur lors de l\'envoi:', error);
+                showMessage('Erreur de connexion. Veuillez réessayer.', 'error');
+            } finally {
+                // Réactiver le bouton
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalText;
             }
         });
-        
+
         // Validation en temps réel des champs
         const emailInput = document.getElementById('email');
         if (emailInput) {
             emailInput.addEventListener('blur', function() {
                 const email = this.value.trim();
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                
+
                 if (email && !emailPattern.test(email)) {
                     this.style.borderColor = '#ef4444';
                     this.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, 0.1)';
@@ -157,9 +207,39 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
+    // Fonction pour afficher les messages
+    function showMessage(message, type) {
+        // Supprimer les messages existants
+        const existingMessage = document.querySelector('.form-message');
+        if (existingMessage) {
+            existingMessage.remove();
+        }
+
+        // Créer le nouveau message
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `form-message p-4 rounded-lg mb-6 ${
+            type === 'success'
+                ? 'bg-green-100 text-green-800 border border-green-200'
+                : 'bg-red-100 text-red-800 border border-red-200'
+        }`;
+        messageDiv.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'} mr-2"></i>${message}`;
+
+        // Insérer le message avant le formulaire
+        const form = document.getElementById('contactForm');
+        form.parentNode.insertBefore(messageDiv, form);
+
+        // Faire défiler vers le message
+        messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+        // Supprimer le message après 5 secondes
+        setTimeout(() => {
+            messageDiv.remove();
+        }, 5000);
+    }
     
     // ============================================================
-    // 7. EFFECTER UN DÉCALAGE DES CARTES DE TÉMOIGNAGES
+    // 7. EFFECTUER UN DÉCALAGE DES CARTES DE TÉMOIGNAGES
     // ============================================================
     const testimonyCards = document.querySelectorAll('#temoignages .bg-gradient-to-br');
     testimonyCards.forEach((card, index) => {
@@ -276,6 +356,64 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.classList.add('text-blue-600', 'border-blue-600');
             }
         });
+    });
+    
+    // ============================================================
+    // 13. MISE À JOUR DE L'ANNÉE DU COPYRIGHT
+    // ============================================================
+    const copyrightElement = document.getElementById('copyright');
+    if (copyrightElement) {
+        const currentYear = new Date().getFullYear();
+        copyrightElement.innerHTML = `&copy; ${currentYear} Tabernacle de la Résurrection. Tous droits réservés.`;
+    }
+    
+    // ============================================================
+    // 14. GESTION DU MODE THÈME
+    // ============================================================
+    const lightModeBtn = document.getElementById('light-mode-btn');
+    const darkModeBtn = document.getElementById('dark-mode-btn');
+    const themeDetails = document.querySelector('details');
+    
+    function setTheme(theme) {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        }
+        if (themeDetails) {
+            themeDetails.open = false;
+        }
+    }
+    
+    if (lightModeBtn) {
+        lightModeBtn.addEventListener('click', function() {
+            setTheme('light');
+        });
+    }
+    
+    if (darkModeBtn) {
+        darkModeBtn.addEventListener('click', function() {
+            setTheme('dark');
+        });
+    }
+    
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        setTheme('dark');
+    } else if (savedTheme === 'light') {
+        setTheme('light');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme('dark');
+    } else {
+        setTheme('light');
+    }
+    
+    document.addEventListener('click', function(event) {
+        if (themeDetails && !themeDetails.contains(event.target)) {
+            themeDetails.open = false;
+        }
     });
     
     console.log('✅ JavaScript chargé avec succès - Tabernacle de la Résurrection');

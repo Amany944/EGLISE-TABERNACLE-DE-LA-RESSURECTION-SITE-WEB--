@@ -234,6 +234,7 @@ html {
 
 /* Navigation avec effet de recollement sticky */
 header {
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.95);
 }
@@ -429,9 +430,9 @@ textarea:focus-visible {
 /* Préférence de mouvement réduit */
 @media (prefers-reduced-motion: reduce) {
     * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        animation-duration: 0.03ms !important;
+        animation-iteration-count: 2 !important;
+        transition-duration: 0.03ms !important;
     }
 }
 
@@ -452,4 +453,13 @@ textarea:focus-visible {
         margin: 0;
         padding: 0;
     }
+}
+
+
+   /* ======================================================
+   le choix ddu theme  du site par l' utilisateur 
+   ====================================================== */
+
+@media (prefers-color-scheme:dark ) {
+    color-scheme: black;
 }

@@ -1,0 +1,14 @@
+salut, crees un backen de ce site avec les technologies de base et faciles à prendre en main 
+
+ce backen prendra en compte la gestion de tous les imput des utilisateurs et de tous les bouttons que doivent cliqué les utilisateurs, utilise des solutions simple 
+
+le backen doit aussi avoir un fichier python qui gerera certaines tacues conformement aux fichiers python qui gere les backen des sites moderne 
+
+fais quelque chose de moderne et de tres créatif . 
+
+ que ce soit vraiment moderne et en tout cas a jour en fonction des nouvelles et modernes fonctionnement des parties backen des site, 
+
+
+ tu t'inpira alors du site de la compassion aisi que celui de ICC brazzaville , rien que les interactions backen 
+
+ fais que le code soit propre et comprehensivle avec des commentaires et tout 
