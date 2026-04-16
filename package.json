@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "eglise-tabernacle-site-web",
   "version": "1.0.0",
   "description": "Site web de l'Eglise Tabernacle de la Resurrection",
@@ -6,6 +7,15 @@
   "scripts": {
     "dev": "npx --no-install tailwindcss -i ./input.css -o ./CSS/tailwind.css --watch",
     "build:css": "npx --no-install tailwindcss -i ./input.css -o ./CSS/tailwind.css --minify"
+=======
+  "name": "eglise-tabernacle-backend",
+  "version": "1.0.0",
+  "description": "Site web de l'Église Tabernacle de la Résurrection",
+  "private": true,
+  "scripts": {
+    "dev": "npx tailwindcss -i ./input.css -o ./CSS/tailwind.css --watch",
+    "build:css": "npx tailwindcss -i ./input.css -o ./CSS/tailwind.css --minify"
+>>>>>>> 9786019b7e98e98da08f2e7d2281a6b94a119f6f
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.2.2",

@@ -151,11 +151,14 @@
 /* Scroll lisse pour toute la page */
 html {
     scroll-behavior: smooth;
+<<<<<<< HEAD
     scroll-padding-top: 6rem;
 }
 
 section {
     scroll-margin-top: 6rem;
+=======
+>>>>>>> 9786019b7e98e98da08f2e7d2281a6b94a119f6f
 }
 
 /* Customisation de la scrollbar */
@@ -223,6 +226,7 @@ section {
 
 /* Cartes générale avec effet de survol */
 .card {
+<<<<<<< HEAD
     transition: all 0.1s ease;
     border-radius: 12px;
     overflow: hidden;
@@ -230,6 +234,11 @@ section {
     -moz-transition: all 0.1s ease;
     -ms-transition: all 0.1s ease;
     -o-transition: all 0.1s ease;
+=======
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+>>>>>>> 9786019b7e98e98da08f2e7d2281a6b94a119f6f
 }
 
 .card:hover {
@@ -499,4 +508,8 @@ textarea:focus-visible {
     .btn-secondary:hover {
         background-color: rgba(37, 99, 235, 0.1);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 9786019b7e98e98da08f2e7d2281a6b94a119f6f

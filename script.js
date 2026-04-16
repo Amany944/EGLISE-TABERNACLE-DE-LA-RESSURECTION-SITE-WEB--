@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
+<<<<<<< HEAD
                 const header = document.querySelector('header');
                 const headerHeight = header ? header.offsetHeight : 0;
                 const targetPosition = window.pageYOffset + targetElement.getBoundingClientRect().top - headerHeight - 16;
@@ -94,6 +95,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 window.scrollTo({
                     top: Math.max(targetPosition, 0),
+=======
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = targetElement.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+>>>>>>> 9786019b7e98e98da08f2e7d2281a6b94a119f6f
                     behavior: 'smooth'
                 });
             }
