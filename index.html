@@ -12,43 +12,43 @@
     <!-- Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+<body class="text-gray-800 bg-white dark:bg-gray-900 dark:text-gray-200">
 
     <!-- ============================================================
          HEADER / NAVIGATION
          ============================================================ -->
-    <header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+    <header class="sticky top-0 z-50 bg-white shadow-md dark:bg-gray-800">
+        <nav class="flex items-center justify-between px-4 py-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             
             <!-- LOGO -->
             <div class="flex-shrink-0">
-                <img src="images/LOGO TDR.jpg" alt="Logo Tabernacle" class="h-16 w-auto rounded-full shadow-lg hover:shadow-xl transition-shadow">
+                <img src="images/LOGO TDR.jpg" alt="Logo Tabernacle" class="w-auto h-16 transition-shadow rounded-full shadow-lg hover:shadow-xl">
             </div>
 
             <!-- MENU NAVIGATION (Desktop) -->
-            <ul class="hidden md:flex space-x-8 font-semibold text-gray-700">
+            <ul class="hidden space-x-8 font-semibold text-gray-700 md:flex">
                 <li>
-                    <a href="#accueil" class="hover:text-blue-600 transition-colors duration-300 border-b-2 border-transparent hover:border-blue-600 pb-1">
+                    <a href="#accueil" class="pb-1 transition-colors duration-300 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600">
                         Accueil
                     </a>
                 </li>
                 <li>
-                    <a href="#qui-sommes-nous" class="hover:text-blue-600 transition-colors duration-300 border-b-2 border-transparent hover:border-blue-600 pb-1">
+                    <a href="#qui-sommes-nous" class="pb-1 transition-colors duration-300 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600">
                         Qui sommes nous
                     </a>
                 </li>
                 <li>
-                    <a href="#mission" class="hover:text-blue-600 transition-colors duration-300 border-b-2 border-transparent hover:border-blue-600 pb-1">
+                    <a href="#mission" class="pb-1 transition-colors duration-300 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600">
                         Notre mission
                     </a>
                 </li>
                 <li>
-                    <a href="#temoignages" class="hover:text-blue-600 transition-colors duration-300 border-b-2 border-transparent hover:border-blue-600 pb-1">
+                    <a href="#temoignages" class="pb-1 transition-colors duration-300 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600">
                         Les témoignages
                     </a>
                 </li>
                 <li>
-                    <a href="#contact" class="hover:text-blue-600 transition-colors duration-300 border-b-2 border-transparent hover:border-blue-600 pb-1">
+                    <a href="#contact" class="pb-1 transition-colors duration-300 border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600">
                         Nous contacter
                     </a>
                 </li>
@@ -56,7 +56,7 @@
 
             <!-- MENU BURGER (Mobile) -->
             <div class="md:hidden">
-                <button id="menu-btn" type="button" class="text-blue-600 text-2xl focus:outline-none hover:text-blue-800 transition-colors p-2" aria-label="Ouvrir le menu" aria-expanded="false">
+                <button id="menu-btn" type="button" class="p-2 text-2xl text-blue-600 transition-colors focus:outline-none hover:text-blue-800" aria-label="Ouvrir le menu" aria-expanded="false">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -64,17 +64,17 @@
             <!-- DROPDOWN MODE THÈME -->
             <div class="flex items-center">
                 <details class="relative">
-                    <summary class="text-gray-750 dark:text-black text-2xl focus:outline-none hover:text-blue-800 dark:hover:text-blue-300 transition-colors p-2 cursor-pointer list-none" aria-label="Paramètres d'affichage">
+                    <summary class="p-2 text-2xl list-none transition-colors cursor-pointer text-gray-750 dark:text-black focus:outline-none hover:text-blue-800 dark:hover:text-blue-300" aria-label="Paramètres d'affichage">
                         <i class="fas fa-cog"></i>
                     </summary>
-                    <div class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50">
+                    <div class="absolute right-0 z-50 w-48 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg dark:bg-gray-800 dark:border-gray-700">
                         <div class="py-2">
-                            <button id="light-mode-btn" class="w-full text-left px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex items-center">
-                                <i class="fas fa-sun mr-3 text-yellow-500"></i>
+                            <button id="light-mode-btn" class="flex items-center w-full px-4 py-2 text-left text-gray-700 transition-colors dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <i class="mr-3 text-yellow-500 fas fa-sun"></i>
                                 Mode clair
                             </button>
-                            <button id="dark-mode-btn" class="w-full text-left px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex items-center">
-                                <i class="fas fa-moon mr-3 text-blue-500"></i>
+                            <button id="dark-mode-btn" class="flex items-center w-full px-4 py-2 text-left text-gray-700 transition-colors dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                <i class="mr-3 text-blue-500 fas fa-moon"></i>
                                 Mode sombre
                             </button>
                         </div>
@@ -84,20 +84,20 @@
         </nav>
 
         <!-- MENU MOBILE DÉROULANT -->
-        <div id="mobile-menu" class="hidden md:hidden bg-blue-50 dark:bg-gray-700 px-4 py-4 space-y-2 border-t border-blue-200 dark:border-gray-600">
-            <a href="#accueil" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors">
+        <div id="mobile-menu" class="hidden px-4 py-4 space-y-2 border-t border-blue-200 md:hidden bg-blue-50 dark:bg-gray-700 dark:border-gray-600">
+            <a href="#accueil" class="block py-2 font-semibold text-gray-700 transition-colors dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
                 Accueil         
             </a>
-            <a href="#qui-sommes-nous" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors">
+            <a href="#qui-sommes-nous" class="block py-2 font-semibold text-gray-700 transition-colors dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
                 Qui sommes nous
             </a>
-            <a href="#mission" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors">
+            <a href="#mission" class="block py-2 font-semibold text-gray-700 transition-colors dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
                 Notre mission
             </a>
-            <a href="#temoignages" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors">
+            <a href="#temoignages" class="block py-2 font-semibold text-gray-700 transition-colors dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
                 Les témoignages
             </a>
-            <a href="#contact" class="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-semibold transition-colors">
+            <a href="#contact" class="block py-2 font-semibold text-gray-700 transition-colors dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
                 Nous contacter
             </a>
         </div>
@@ -106,33 +106,33 @@
     <!-- ============================================================
          SECTION ACCUEIL
          ============================================================ -->
-    <section id="accueil" class="bg-gradient-to-br from-white dark:from-gray-900 via-blue-50 dark:via-gray-800 to-white dark:to-gray-900 py-16 sm:py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section id="accueil" class="py-16 bg-gradient-to-br from-white dark:from-gray-900 via-blue-50 dark:via-gray-800 to-white dark:to-gray-900 sm:py-24">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="grid items-center grid-cols-1 gap-12 md:grid-cols-2">
                 
                 <!-- Image -->
                 <div class="fade-in">
-                    <img src="images/PASTEUR DEVANT LA CHAIR.jpg" alt="Église Tabernacle" class="rounded-lg shadow-2xl hover:shadow-3xl transition-shadow object-cover w-full h-96">
+                    <img src="images/PASTEUR DEVANT LA CHAIR.jpg" alt="Église Tabernacle" class="object-cover w-full transition-shadow rounded-lg shadow-2xl hover:shadow-3xl h-96">
                 </div>
 
                 <!-- Texte d'accueil -->
-                <div class="fade-in delay-200">
-                    <h1 class="text-4xl sm:text-5xl font-bold text-blue-600 mb-6">
+                <div class="delay-200 fade-in">
+                    <h1 class="mb-6 text-4xl font-bold text-blue-600 sm:text-5xl">
                         Bienvenue au Tabernacle de la Résurrection
                     </h1>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                    <p class="mb-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                         Nous sommes une communauté chrétienne dynamique basée à Brazzaville, dédiée à servir Dieu et à partager l'évangile de Jésus-Christ avec dévouement et amour.
                     </p>
-                    <p class="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+                    <p class="mb-8 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                         Rejoignez-nous chaque dimanche pour des services de culte enrichissants, des prières puissantes et une communion fraternelle remplie de l'Esprit Saint.
                     </p>
 
                     <!-- Boutons d'action -->
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
+                    <div class="flex flex-col gap-4 sm:flex-row">
+                        <a href="#contact" class="px-8 py-3 font-semibold text-white transition-colors bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700">
                             Nous Visiter
                         </a>
-                        <a href="https://www.facebook.com/profile.php?id=61583753739519&amp;sk=reels_tab" target="_blank" rel="noopener noreferrer" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                        <a href="https://www.facebook.com/profile.php?id=61583753739519&amp;sk=reels_tab" target="_blank" rel="noopener noreferrer" class="px-8 py-3 font-semibold text-blue-600 transition-colors border-2 border-blue-600 rounded-lg hover:bg-blue-50">
                             En Savoir Plus
                         </a>
                     </div>
@@ -144,40 +144,40 @@
     <!-- ============================================================
          SECTION QUI SOMMES-NOUS
          ============================================================ -->
-    <section id="qui-sommes-nous" class="bg-white dark:bg-gray-900 py-16 sm:py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 fade-in-up">
-                <h2 class="text-4xl sm:text-5xl font-bold text-blue-600 mb-4">
+    <section id="qui-sommes-nous" class="py-16 bg-white dark:bg-gray-900 sm:py-24">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="mb-12 text-center fade-in-up">
+                <h2 class="mb-4 text-4xl font-bold text-blue-600 sm:text-5xl">
                     Qui sommes-nous ?
                 </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                <p class="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
                     Découvrez l'histoire et les valeurs qui nous définissent
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="grid items-center grid-cols-1 gap-12 md:grid-cols-2">
                 <!-- Image du Pasteur -->
-                <div class="fade-in-up delay-100">
-                    <img src="images/PASTEUR EN CHAIR EN VESTE NOIR OK.jpg" alt="Pasteur Ludovic MPASSI" class="rounded-lg shadow-2xl hover:shadow-3xl transition-shadow object-cover w-full h-96">
+                <div class="delay-100 fade-in-up">
+                    <img src="images/PASTEUR EN CHAIR EN VESTE NOIR OK.jpg" alt="Pasteur Ludovic MPASSI" class="object-cover w-full transition-shadow rounded-lg shadow-2xl hover:shadow-3xl h-96">
                 </div>
 
                 <!-- Contenu texte -->
-                <div class="fade-in-up delay-200">
-                    <h3 class="text-3xl font-bold text-blue-600 mb-4">
+                <div class="delay-200 fade-in-up">
+                    <h3 class="mb-4 text-3xl font-bold text-blue-600">
                         Pasteur Ludovic MPASSI
                     </h3>
-                    <p class="text-gray-700 dark:text-gray-300 text-lg mb-6 leading-relaxed">
+                    <p class="mb-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                         Sous la direction spirituelle du Pasteur Ludovic MPASSI, le Tabernacle de la Résurrection s'est établi comme un phare d'espoir et de foi dans la communauté de Brazzaville.
                     </p>
-                    <p class="text-gray-700 dark:text-gray-300 text-lg mb-6 leading-relaxed">
+                    <p class="mb-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                         Notre église accueille tous les croyants qui cherchent une relation authentique avec Dieu. Nous croyons à la puissance de la prière, à la guérison divine et à la transformation spirituelle.
                     </p>
 
                     <!-- Points clés -->
-                    <div class="space-y-4 mt-8">
+                    <div class="mt-8 space-y-4">
                         <div class="flex items-start space-x-4">
                             <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+                                <div class="flex items-center justify-center w-12 h-12 text-white bg-blue-600 rounded-md">
                                     <i class="fas fa-check"></i>
                                 </div>
                             </div>
@@ -189,7 +189,7 @@
 
                         <div class="flex items-start space-x-4">
                             <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+                                <div class="flex items-center justify-center w-12 h-12 text-white bg-blue-600 rounded-md">
                                     <i class="fas fa-check"></i>
                                 </div>
                             </div>
@@ -201,7 +201,7 @@
 
                         <div class="flex items-start space-x-4">
                             <div class="flex-shrink-0">
-                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+                                <div class="flex items-center justify-center w-12 h-12 text-white bg-blue-600 rounded-md">
                                     <i class="fas fa-check"></i>
                                 </div>
                             </div>
@@ -219,61 +219,61 @@
     <!-- ============================================================
          SECTION NOTRE MISSION
          ============================================================ -->
-    <section id="mission" class="bg-gradient-to-br from-blue-50 dark:from-gray-800 to-white dark:to-gray-900 py-16 sm:py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 fade-in-up">
-                <h2 class="text-4xl sm:text-5xl font-bold text-blue-600 mb-4">
+    <section id="mission" class="py-16 bg-gradient-to-br from-blue-50 dark:from-gray-800 to-white dark:to-gray-900 sm:py-24">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="mb-12 text-center fade-in-up">
+                <h2 class="mb-4 text-4xl font-bold text-blue-600 sm:text-5xl">
                     Notre Mission
                 </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                <p class="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
                     Ce qui nous guide et donne sens à notre ministère
                 </p>
             </div>
 
             <!-- Grille des missions -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
                 
                 <!-- Carte 1 -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow p-8 fade-in-up delay-100">
-                    <div class="text-4xl text-blue-600 mb-4">
+                <div class="p-8 transition-shadow delay-100 bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:shadow-2xl fade-in-up">
+                    <div class="mb-4 text-4xl text-blue-600">
                         <i class="fas fa-cross"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">Évangélisation</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <h3 class="mb-4 text-2xl font-bold text-gray-800 dark:text-gray-200">Évangélisation</h3>
+                    <p class="leading-relaxed text-gray-600 dark:text-gray-400">
                         Partager la Bonne Nouvelle de l'évangile de Jésus-Christ à travers des campagnes d'évangélisation, des cultes publics et le témoignage personnel.
                     </p>
                 </div>
 
                 <!-- Carte 2 -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow p-8 fade-in-up delay-200">
-                    <div class="text-4xl text-blue-600 mb-4">
+                <div class="p-8 transition-shadow delay-200 bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:shadow-2xl fade-in-up">
+                    <div class="mb-4 text-4xl text-blue-600">
                         <i class="fas fa-hands-praying"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">Guérison et Délivrance</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <h3 class="mb-4 text-2xl font-bold text-gray-800 dark:text-gray-200">Guérison et Délivrance</h3>
+                    <p class="leading-relaxed text-gray-600 dark:text-gray-400">
                         Conduire les réunions de prière pour la guérison divine, la délivrance spirituelle et la transformation personnelle selon la volonté de Dieu.
                     </p>
                 </div>
 
                 <!-- Carte 3 -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-2xl transition-shadow p-8 fade-in-up delay-300">
-                    <div class="text-4xl text-blue-600 mb-4">
+                <div class="p-8 transition-shadow delay-300 bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:shadow-2xl fade-in-up">
+                    <div class="mb-4 text-4xl text-blue-600">
                         <i class="fas fa-people-group"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">Discipulat</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <h3 class="mb-4 text-2xl font-bold text-gray-800 dark:text-gray-200">Discipulat</h3>
+                    <p class="leading-relaxed text-gray-600 dark:text-gray-400">
                         Former et équiper les croyants à devenir des disciples de Jésus-Christ matures et actifs dans leur foi et leur témoignage.
                     </p>
                 </div>
             </div>
 
             <!-- Contenu additionnel de la mission -->
-            <div class="mt-16 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 fade-in-up">
-                <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">Notre Engagement</h3>
-                <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+            <div class="p-8 mt-16 bg-white rounded-lg shadow-lg dark:bg-gray-800 fade-in-up">
+                <h3 class="mb-4 text-2xl font-bold text-gray-800 dark:text-gray-200">Notre Engagement</h3>
+                <p class="mb-4 leading-relaxed text-gray-700 dark:text-gray-300">
                     À travers nos services spirituels, nous nous engageons à être une lumière dans Brazzaville et à apporter espoir et guérison à tous ceux qui nous rejoignent. Nous croyons fermement aux miracles et à la transformation que seul Dieu peut apporter.
                 </p>
-                <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p class="leading-relaxed text-gray-700 dark:text-gray-300">
                     Notre vision est de voir une génération de croyants forts en foi, vivants selon la Parole de Dieu, et actifs dans l'extension du royaume de Dieu.
                 </p>
             </div>
@@ -283,123 +283,123 @@
     <!-- ============================================================
          SECTION TÉMOIGNAGES
          ============================================================ -->
-    <section id="temoignages" class="bg-white dark:bg-gray-900 py-16 sm:py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 fade-in-up">
-                <h2 class="text-4xl sm:text-5xl font-bold text-blue-600 mb-4">
+    <section id="temoignages" class="py-16 bg-white dark:bg-gray-900 sm:py-24">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="mb-12 text-center fade-in-up">
+                <h2 class="mb-4 text-4xl font-bold text-blue-600 sm:text-5xl">
                     Les Témoignages
                 </h2>
-                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                <p class="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
                     Écoutez les récits authentiques de guérison et de transformation spirituelle
                 </p>
             </div>
 
             <!-- Grille des témoignages -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 
                 <!-- Témoignage 1 -->
-                <div class="bg-gradient-to-br from-blue-50 dark:from-gray-700 to-white dark:to-gray-900 rounded-lg shadow-lg p-8 fade-in-up delay-100">
+                <div class="p-8 delay-100 rounded-lg shadow-lg bg-gradient-to-br from-blue-50 dark:from-gray-700 to-white dark:to-gray-900 fade-in-up">
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    <p class="mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
                         "J'étais souffrant depuis longtemps, et personne ne pouvait m'aider. Après une prière au Tabernacle avec le Pasteur MPASSI, j'ai senti le pouvoir de Dieu m'envahir, et j'ai été complètement guéri. Gloire à Dieu !"
                     </p>
-                    <div class="border-t border-blue-200 dark:border-gray-600 pt-4">
+                    <div class="pt-4 border-t border-blue-200 dark:border-gray-600">
                         <p class="font-semibold text-gray-800 dark:text-gray-200">Jean Luc M.</p>
                         <p class="text-sm text-blue-600">Guérison miraculeuse</p>
                     </div>
                 </div>
 
                 <!-- Témoignage 2 -->
-                <div class="bg-gradient-to-br from-blue-50 dark:from-gray-700 to-white dark:to-gray-900 rounded-lg shadow-lg p-8 fade-in-up delay-200">
+                <div class="p-8 delay-200 rounded-lg shadow-lg bg-gradient-to-br from-blue-50 dark:from-gray-700 to-white dark:to-gray-900 fade-in-up">
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    <p class="mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
                         "Ma vie était remplie de difficultés et de désespoir. Au Tabernacle, j'ai trouvé la foi, l'espoir et une famille unie. Le ministère du Pasteur MPASSI a transformé ma vie spirituelle complètement."
                     </p>
-                    <div class="border-t border-blue-200 dark:border-gray-600 pt-4">
+                    <div class="pt-4 border-t border-blue-200 dark:border-gray-600">
                         <p class="font-semibold text-gray-800 dark:text-gray-200">Marie Jeanne K.</p>
                         <p class="text-sm text-blue-600">Transformation spirituelle</p>
                     </div>
                 </div>
 
                 <!-- Témoignage 3 -->
-                <div class="bg-gradient-to-br from-blue-50 dark:from-gray-700 to-white dark:to-gray-900 rounded-lg shadow-lg p-8 fade-in-up delay-300">
+                <div class="p-8 delay-300 rounded-lg shadow-lg bg-gradient-to-br from-blue-50 dark:from-gray-700 to-white dark:to-gray-900 fade-in-up">
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    <p class="mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
                         "Pendant les réunions de prière, j'ai reçu la présence de l'Esprit Saint. Mon cœur a été purifié, et je sens une force nouvelle en moi. Je recommande vivement ce lieu de recueillement."
                     </p>
-                    <div class="border-t border-blue-200 dark:border-gray-600 pt-4">
+                    <div class="pt-4 border-t border-blue-200 dark:border-gray-600">
                         <p class="font-semibold text-gray-800 dark:text-gray-200">Pierre N.</p>
                         <p class="text-sm text-blue-600">Expérience spirituelle profonde</p>
                     </div>
                 </div>
 
                 <!-- Témoignage 4 -->
-                <div class="bg-gradient-to-br from-blue-50 dark:from-gray-700 to-white dark:to-gray-900 rounded-lg shadow-lg p-8 fade-in-up delay-400">
+                <div class="p-8 rounded-lg shadow-lg bg-gradient-to-br from-blue-50 dark:from-gray-700 to-white dark:to-gray-900 fade-in-up delay-400">
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    <p class="mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
                         "Ma famille était brisée, mais grâce aux prières et à l'accompagnement du Pasteur MPASSI, nous avons retrouvé l'amour et l'harmonie. C'est un véritable miracle !"
                     </p>
-                    <div class="border-t border-blue-200 dark:border-gray-600 pt-4">
+                    <div class="pt-4 border-t border-blue-200 dark:border-gray-600">
                         <p class="font-semibold text-gray-800 dark:text-gray-200">David et Sylvie T.</p>
                         <p class="text-sm text-blue-600">Réconciliation familiale</p>
                     </div>
                 </div>
 
                 <!-- Témoignage 5 -->
-                <div class="bg-gradient-to-br from-blue-50 dark:from-gray-700 to-white dark:to-gray-900 rounded-lg shadow-lg p-8 fade-in-up delay-500">
+                <div class="p-8 delay-500 rounded-lg shadow-lg bg-gradient-to-br from-blue-50 dark:from-gray-700 to-white dark:to-gray-900 fade-in-up">
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    <p class="mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
                         "J'étais dans un état de dépression profonde. Après plusieurs prières avec le Tabernacle, j'ai reçu une libération totale. La puissance de Dieu est réelle !"
                     </p>
-                    <div class="border-t border-blue-200 dark:border-gray-600 pt-4">
+                    <div class="pt-4 border-t border-blue-200 dark:border-gray-600">
                         <p class="font-semibold text-gray-800 dark:text-gray-200">Carole M.</p>
                         <p class="text-sm text-blue-600">Libération émotionnelle</p>
                     </div>
                 </div>
 
                 <!-- Témoignage 6 -->
-                <div class="bg-gradient-to-br from-blue-50 dark:from-gray-700 to-white dark:to-gray-900 rounded-lg shadow-lg p-8 fade-in-up delay-600">
+                <div class="p-8 rounded-lg shadow-lg bg-gradient-to-br from-blue-50 dark:from-gray-700 to-white dark:to-gray-900 fade-in-up delay-600">
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        <i class="fas fa-star text-yellow-400 text-lg"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
+                        <i class="text-lg text-yellow-400 fas fa-star"></i>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    <p class="mb-6 leading-relaxed text-gray-700 dark:text-gray-300">
                         "En travaillant depuis longtemps sans résultat, j'ai trouvé au Tabernacle un lieu où croire. Par la prière du Pasteur MPASSI, j'ai obtenu un emploi stable. Merci Seigneur !"
                     </p>
-                    <div class="border-t border-blue-200 dark:border-gray-600 pt-4">
+                    <div class="pt-4 border-t border-blue-200 dark:border-gray-600">
                         <p class="font-semibold text-gray-800 dark:text-gray-200">Samuel B.</p>
                         <p class="text-sm text-blue-600">Provision matérielle</p>
                     </div>
@@ -411,26 +411,26 @@
     <!-- ============================================================
          SECTION NOUS CONTACTER
          ============================================================ -->
-    <section id="contact" class="bg-gradient-to-br from-blue-600 to-blue-800 py-16 sm:py-24">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 fade-in-up">
-                <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">
+    <section id="contact" class="py-16 bg-gradient-to-br from-blue-600 to-blue-800 sm:py-24">
+        <div class="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
+            <div class="mb-12 text-center fade-in-up">
+                <h2 class="mb-4 text-4xl font-bold text-white sm:text-5xl">
                     Nous Contacter 
                 </h2>
-                <p class="text-lg text-blue-100 dark:text-blue-200 max-w-2xl mx-auto">
+                <p class="max-w-2xl mx-auto text-lg text-blue-100 dark:text-blue-200">
                     Prenez contact avec nous pour toutes questions ou pour nous rendre visite
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="grid grid-cols-1 gap-8 mb-12 md:grid-cols-3">
                 
                 <!-- Localisation -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 text-center fade-in-up delay-100">
-                    <div class="text-4xl text-blue-600 mb-4">
+                <div class="p-8 text-center delay-100 bg-white rounded-lg shadow-lg dark:bg-gray-800 fade-in-up">
+                    <div class="mb-4 text-4xl text-blue-600">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Adresse</h3>
-                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-sm">
+                    <h3 class="mb-2 text-xl font-bold text-gray-800 dark:text-gray-200">Adresse</h3>
+                    <p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                         P13 Lot Parcelle 240 SONACO, MOUKONDO
                         <br>
                         Av de la Poste, après l'hôpital des Palestiniens
@@ -440,42 +440,42 @@
                 </div>
 
                 <!-- Téléphone -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 text-center fade-in-up delay-200">
-                    <div class="text-4xl text-blue-600 mb-4">
+                <div class="p-8 text-center delay-200 bg-white rounded-lg shadow-lg dark:bg-gray-800 fade-in-up">
+                    <div class="mb-4 text-4xl text-blue-600">
                         <i class="fas fa-phone"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Téléphone / WhatsApp</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-lg font-semibold">
+                    <h3 class="mb-2 text-xl font-bold text-gray-800 dark:text-gray-200">Téléphone / WhatsApp</h3>
+                    <p class="text-lg font-semibold text-gray-600 dark:text-gray-400">
                         +242 06 984 2607
                     </p>
-                    <a href="https://wa.me/242069842607" class="inline-block mt-4 bg-green-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors">
-                        <i class="fab fa-whatsapp mr-2"></i>Écrire sur WhatsApp
+                    <a href="https://wa.me/242069842607" class="inline-block px-6 py-2 mt-4 font-semibold text-white transition-colors bg-green-500 rounded-lg hover:bg-green-600">
+                        <i class="mr-2 fab fa-whatsapp"></i>Écrire sur WhatsApp
                     </a>
                 </div>
 
                 <!-- Facebook -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 text-center fade-in-up delay-300">
-                    <div class="text-4xl text-blue-600 mb-4">
+                <div class="p-8 text-center delay-300 bg-white rounded-lg shadow-lg dark:bg-gray-800 fade-in-up">
+                    <div class="mb-4 text-4xl text-blue-600">
                         <i class="fab fa-facebook"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Facebook</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">
+                    <h3 class="mb-2 text-xl font-bold text-gray-800 dark:text-gray-200">Facebook</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
                         Rendez-vous sur notre page Facebook pour plus d'informations
                     </p>
-                    <a href="https://www.facebook.com/tabernacle.de.la.resurection" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                        <i class="fab fa-facebook mr-2"></i>Nous suivre
+                    <a href="https://www.facebook.com/tabernacle.de.la.resurection" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-2 mt-4 font-semibold text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700">
+                        <i class="mr-2 fab fa-facebook"></i>Nous suivre
                     </a>
                 </div>
             </div>
 
             <!-- Formulaire de contact -->
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-2xl p-8 fade-in-up delay-400">
-                <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">Envoyez-nous un message</h3>
-                <form id="contactForm" class="space-y-6" novalidate>
+                <div class="p-8 bg-white rounded-lg shadow-2xl dark:bg-gray-800 fade-in-up delay-400">
+                <h3 class="mb-6 text-2xl font-bold text-gray-800 dark:text-gray-200">Envoyez-nous un message</h3>
+                <form   name="contact" method="POST" data-netlify="true" class="space-y-6" >
                     
                     <!-- Champ Nom -->
                     <div>
-                        <label for="name" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        <label for="name" class="block mb-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
                             Votre Nom *
                         </label>
                         <input 
@@ -483,14 +483,14 @@
                             id="name" 
                             name="name" 
                             required
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all"
+                            class="w-full px-4 py-3 transition-all border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
                             placeholder="Entrez votre nom"
                         >
                     </div>
 
                     <!-- Champ Email -->
                     <div>
-                        <label for="email" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        <label for="email" class="block mb-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
                             Votre Email *
                         </label>
                         <input 
@@ -498,28 +498,28 @@
                             id="email" 
                             name="email" 
                             required
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all"
+                            class="w-full px-4 py-3 transition-all border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
                             placeholder="Entrez votre email"
                         >
                     </div>
 
                     <!-- Champ Téléphone -->
                     <div>
-                        <label for="phone" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        <label for="phone" class="block mb-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
                             Votre Téléphone
                         </label>
                         <input 
                             type="tel" 
                             id="phone" 
                             name="phone"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all"
+                            class="w-full px-4 py-3 transition-all border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
                             placeholder="Entrez votre numéro de téléphone"
                         >
                     </div>
 
                     <!-- Champ Sujet -->
                     <div>
-                        <label for="subject" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        <label for="subject" class="block mb-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
                             Sujet *
                         </label>
                         <input 
@@ -527,14 +527,14 @@
                             id="subject" 
                             name="subject" 
                             required
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all"
+                            class="w-full px-4 py-3 transition-all border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
                             placeholder="Quel est le sujet de votre message ?"
                         >
                     </div>
 
                     <!-- Champ Message -->
                     <div>
-                        <label for="message" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                        <label for="message" class="block mb-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
                             Votre Message *
                         </label>
                         <textarea 
@@ -542,7 +542,7 @@
                             name="message" 
                             required
                             rows="6"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all resize-none"
+                            class="w-full px-4 py-3 transition-all border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-600"
                             placeholder="Écrivez votre message ici..."
                         ></textarea>
                     </div>
@@ -551,9 +551,9 @@
                     <div>
                         <button 
                             type="submit"
-                            class="w-full bg-blue-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors shadow-lg transform hover:scale-105 duration-300"
+                            class="w-full px-8 py-4 font-bold text-white transition-colors duration-300 transform bg-blue-600 rounded-lg shadow-lg hover:bg-blue-700 hover:scale-105"
                         >
-                            <i class="fas fa-paper-plane mr-2"></i>Envoyer le Message
+                            <i class="mr-2 fas fa-paper-plane"></i>Envoyer le Message
                         </button>
                     </div>
                 </form>
@@ -564,51 +564,51 @@
     <!-- ============================================================
          FOOTER
          ============================================================ -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+    <footer class="py-12 text-white bg-gray-800">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 mb-8 md:grid-cols-3">
                 
                 <!-- Colonne 1 : À propos -->
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Tabernacle de la Résurrection</h4>
-                    <p class="text-gray-400 leading-relaxed">
+                    <h4 class="mb-4 text-lg font-bold">Tabernacle de la Résurrection</h4>
+                    <p class="leading-relaxed text-gray-400">
                         Une communauté chrétienne dynamique dédiée à servir Dieu et partager l'évangile de Jésus-Christ.
                     </p>
                 </div>
 
                 <!-- Colonne 2 : Liens rapides -->
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Liens Rapides</h4>
+                    <h4 class="mb-4 text-lg font-bold">Liens Rapides</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li>
-                            <a href="#accueil" class="hover:text-blue-400 transition-colors">Accueil</a>
+                            <a href="#accueil" class="transition-colors hover:text-blue-400">Accueil</a>
                         </li>
                         <li>
-                            <a href="#qui-sommes-nous" class="hover:text-blue-400 transition-colors">Qui sommes nous</a>
+                            <a href="#qui-sommes-nous" class="transition-colors hover:text-blue-400">Qui sommes nous</a>
                         </li>
                         <li>
-                            <a href="#mission" class="hover:text-blue-400 transition-colors">Notre mission</a>
+                            <a href="#mission" class="transition-colors hover:text-blue-400">Notre mission</a>
                         </li>
                         <li>
-                            <a href="#temoignages" class="hover:text-blue-400 transition-colors">Les témoignages</a>
+                            <a href="#temoignages" class="transition-colors hover:text-blue-400">Les témoignages</a>
                         </li>
                         <li>
-                            <a href="#contact" class="hover:text-blue-400 transition-colors">Nous contacter</a>
+                            <a href="#contact" class="transition-colors hover:text-blue-400">Nous contacter</a>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Colonne 3 : Réseaux sociaux -->
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Suivez-nous</h4>
+                    <h4 class="mb-4 text-lg font-bold">Suivez-nous</h4>
                     <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/tabernacle.de.la.resurection" title="Facebook Tabernacle de la Résurrection" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">
+                        <a href="https://www.facebook.com/tabernacle.de.la.resurection" title="Facebook Tabernacle de la Résurrection" class="text-2xl text-gray-400 transition-colors hover:text-blue-400">
                             <i class="fab fa-facebook"></i>
                         </a>
-                        <a href="#" title="WhatsApp Tabernacle de la Résurrection" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">
+                        <a href="#" title="WhatsApp Tabernacle de la Résurrection" class="text-2xl text-gray-400 transition-colors hover:text-blue-400">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                        <a href="https://www.youtube.com/results?search_query=tabernacle+de+la+resurrection+tdr" title="YouTube Tabernacle de la Résurrection" class="text-gray-400 hover:text-blue-400 transition-colors text-2xl">
+                        <a href="https://www.youtube.com/results?search_query=tabernacle+de+la+resurrection+tdr" title="YouTube Tabernacle de la Résurrection" class="text-2xl text-gray-400 transition-colors hover:text-blue-400">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
@@ -616,10 +616,10 @@
             </div>
 
             <!-- Ligne de séparation -->
-            <div class="border-t border-gray-700 pt-8">
+            <div class="pt-8 border-t border-gray-700">
                 <div class="text-center text-gray-400">
                     <p id="copyright">&copy; 2026 Tabernacle de la Résurrection. Tous droits réservés.</p>
-                    <p class="text-sm mt-2">
+                    <p class="mt-2 text-sm">
                         <i class="fas fa-location-dot"></i> Brazzaville, République du Congo
                     </p>
                 </div>
